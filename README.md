@@ -17,6 +17,9 @@ cargo build --release
 # Check dependency resolution
 cargo check -p node-template-runtime
 
+# Build and run
+cargo run -- --dev --tmp
+
 # Install node dependencies
 yarn install
 
