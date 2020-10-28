@@ -14,6 +14,9 @@ cargo build --release
 # Start a Substrate node in development mode
 ./target/release/node-template --dev --tmp
 
+# Check dependency resolution
+cargo check -p node-template-runtime
+
 # Install node dependencies
 yarn install
 
