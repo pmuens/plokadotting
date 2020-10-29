@@ -11,6 +11,9 @@ nix-shell
 # Compile Rust code
 cargo build --release
 
+# Format the code
+cargo fmt
+
 # Start a Substrate node in development mode
 ./target/release/node-template --dev --tmp
 
@@ -49,6 +52,9 @@ cargo build --release
 # Key generation via Substrate
 ~/.cargo/bin/subkey generate --scheme sr25519
 ~/.cargo/bin/subkey inspect --scheme ed25519 <mnemonic>
+
+# Node key generation
+~/.cargo/bin/subkey generate-node-key
 
 # Check dependency resolution
 cargo check -p node-template-runtime
