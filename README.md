@@ -14,6 +14,9 @@ cargo build --release
 # Format the code
 cargo fmt
 
+# Run tests
+cargo test
+
 # Start a Substrate node in development mode
 ./target/release/node-template --dev --tmp
 

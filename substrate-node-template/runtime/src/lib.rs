@@ -368,6 +368,10 @@ impl pallet_scheduler::Trait for Runtime {
     type WeightInfo = ();
 }
 
+impl test_pallet::Trait for Runtime {
+    type Event = Event;
+}
+
 // Create the runtime by composing the FRAME pallets that were previously configured.
 construct_runtime!(
     pub enum Runtime where
@@ -389,6 +393,7 @@ construct_runtime!(
         // TemplateModule: pallet_template::{Module, Call, Storage, Event<T>},
         Scheduler: pallet_scheduler::{Module, Call, Storage, Event<T>},
         Contracts: pallet_contracts::{Module, Call, Config, Storage, Event<T>},
+        TestPallet: test_pallet::{Module, Call, Storage, Event<T>},
     }
 );
 
